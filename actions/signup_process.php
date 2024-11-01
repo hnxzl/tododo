@@ -11,10 +11,8 @@ try {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari form
     $username = $_POST['username'];
     $email = $_POST['email'];
-    // Hash password sebelum disimpan
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
     try {

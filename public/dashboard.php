@@ -30,13 +30,12 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard - Tododo</title>
+    <title>Dashboard | Tododo</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
         <div class="col-md-3 bg-light" style="min-height: 100vh;">
             <div class="text-center p-4">
                 <img src="../public/assets/images/<?php echo $profile_picture; ?>" class="rounded-circle" width="80" height="80" alt="Profile Picture">
@@ -53,7 +52,6 @@ try {
             </ul>
         </div>
 
-        <!-- Main Content -->
         <div class="col-md-9">
             <div class="container p-4">
                 <h4>Dashboard</h4>
@@ -63,11 +61,9 @@ try {
                     <button class="btn btn-info" data-toggle="modal" data-target="#addNoteModal">Tambah Catatan</button>
                 </div>
                 
-                <!-- Pesan jika belum ada item -->
                 <?php if (empty($tasks) && empty($events) && empty($notes)) { ?>
                     <div class="alert alert-info text-center">Belum ada item? Mulai buat sekarang!</div>
                 <?php } else { ?>
-                    <!-- Tampilkan item yang ada -->
                     <h5>Tugas</h5>
                     <div class="row">
                         <?php foreach ($tasks as $task) { ?>
@@ -123,7 +119,6 @@ try {
     </div>
 </div>
 
-<!-- Modal untuk Tambah Tugas -->
 <div class="modal fade" id="addTaskModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -166,7 +161,6 @@ try {
     </div>
 </div>
 
-<!-- Modal untuk Tambah Acara -->
 <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -204,7 +198,6 @@ try {
     </div>
 </div>
 
-<!-- Modal untuk Tambah Catatan -->
 <div class="modal fade" id="addNoteModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -243,7 +236,6 @@ try {
     </div>
 </div>
 
-<!-- Include JS dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

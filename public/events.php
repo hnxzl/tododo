@@ -19,7 +19,7 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Acara - Tododo</title>
+    <title>Acara | Tododo</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -27,7 +27,6 @@ try {
     <div class="row">
         <?php include('sidebar.php'); ?>
 
-        <!-- Main Content -->
         <div class="col-md-9">
             <div class="container p-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
@@ -59,16 +58,13 @@ try {
     </div>
 </div>
 
-<!-- Modal untuk Tambah Acara -->
 <?php include('modals/event_modal.php'); ?>
 
-<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-// Delete event function
 function deleteEvent(eventId) {
     if(confirm('Apakah Anda yakin ingin menghapus acara ini?')) {
         fetch('delete_event.php', {
@@ -91,9 +87,7 @@ function deleteEvent(eventId) {
     }
 }
 
-// Edit event function
 function editEvent(eventId) {
-    // Implement edit functionality
 }
 </script>
 

@@ -19,7 +19,7 @@ try {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Catatan - Tododo</title>
+    <title>Catatan | Tododo</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -27,7 +27,6 @@ try {
     <div class="row">
         <?php include('sidebar.php'); ?>
 
-        <!-- Main Content -->
         <div class="col-md-9">
             <div class="container p-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
@@ -43,7 +42,6 @@ try {
                                     <h5 class="card-title"><?php echo htmlspecialchars($note['title']); ?></h5>
                                     <p class="card-text"><?php echo htmlspecialchars($note['content']); ?></p>
                                     <span class="badge badge-secondary"><?php echo htmlspecialchars($note['priority']); ?></span>
-                                    <!-- Tombol aksi -->
                                     <div class="mt-2">
                                         <button class="btn btn-sm btn-primary" onclick="editNote(<?php echo $note['id']; ?>)">Edit</button>
                                         <button class="btn btn-sm btn-danger" onclick="deleteNote(<?php echo $note['id']; ?>)">Hapus</button>
@@ -58,16 +56,13 @@ try {
     </div>
 </div>
 
-<!-- Modal untuk Tambah Catatan -->
 <?php include('modals/note_modal.php'); ?>
 
-<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-// Delete note function
 function deleteNote(noteId) {
     if(confirm('Apakah Anda yakin ingin menghapus catatan ini?')) {
         fetch('delete_note.php', {
@@ -90,9 +85,7 @@ function deleteNote(noteId) {
     }
 }
 
-// Edit note function
 function editNote(noteId) {
-    // Implement edit functionality
 }
 </script>
 

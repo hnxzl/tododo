@@ -10,7 +10,6 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-// Verifikasi token
 if (isset($_GET['token'])) {
     $token = $_GET['token'];
     
@@ -23,7 +22,6 @@ if (isset($_GET['token'])) {
     }
 }
 
-// Proses form reset password
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = password_hash($_POST['new_password'], PASSWORD_BCRYPT);
     $token = $_POST['token'];
@@ -42,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!-- Form HTML untuk reset password -->
 <form method="POST">
     <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
     <input type="password" name="new_password" required placeholder="Enter new password">
