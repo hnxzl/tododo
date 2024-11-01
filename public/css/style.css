@@ -1,0 +1,31 @@
+#sidebar {
+  width: 250px;
+  transition: width 0.3s;
+}
+
+#sidebar.closed {
+  width: 10;
+}
+
+.card-body .badge {
+  font-size: 12px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+}
+
+.container-fluid .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-fluid .row > .col-lg-4 {
+  flex: 1 1 30%;
+  max-width: 30%;
+}
