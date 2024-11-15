@@ -11,7 +11,6 @@ try {
             $_POST['event_title'],
             $_POST['start_date'],
             $_POST['end_date'],
-            $_POST['event_time']
         ]);
 
         header("Location: dashboard.php");

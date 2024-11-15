@@ -27,8 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
+                $_SESSION['email'] = $user['email'];
                 
-                echo "<script>alert('Login successful!'); window.location.href = '../public/dashboard.php';</script>";
+                echo "<script>alert('Login successful!'); window.location.href = '../public/dashboard.php'; </script>";
             } else {
                 echo "<script>alert('Invalid password!'); window.history.back();</script>";
             }
@@ -36,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<script>alert('Email not found!'); window.history.back();</script>";
         }
     } catch (PDOException $e) {
+        
         error_log("Database error: " . $e->getMessage());
         echo "<script>alert('An error occurred. Please try again later.'); window.history.back();</script>";
     }

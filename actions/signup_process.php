@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'password' => $password,
         ]);
 
-        echo "<script>alert('Sign up successful!'); window.location.href = '../public/index.html';</script>";
+        echo "<script>alert('Sign up successful!'); window.location.href = '../public/index.php';</script>";
     } catch (PDOException $e) {
         if ($e->getCode() == 23000) {
             echo "<script>alert('Email is already registered. Please try another one.'); window.history.back();</script>";

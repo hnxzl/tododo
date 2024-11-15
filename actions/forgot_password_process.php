@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'token' => $token
         ]);
 
-        echo "<script>alert('Password has been reset successfully!'); window.location.href = '../public/index.html';</script>";
+        echo "<script>alert('Password has been reset successfully!'); window.location.href = '../public/index.php';</script>";
     } catch (PDOException $e) {
         echo "<script>alert('An error occurred. Please try again later.'); window.history.back();</script>";
     }
